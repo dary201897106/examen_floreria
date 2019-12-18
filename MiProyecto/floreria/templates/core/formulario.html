@@ -1,0 +1,60 @@
+{% extends "core/base.html" %}
+
+{% block titulo %}
+    FORMULARIO DE FLORES
+{% endblock titulo %}
+{% load static %}
+{% block contenido %}
+    <center>
+    <h1>FORMULARIO</h1>
+    </center>
+    <hr>
+    <br>
+    <form method="POST" action="" id="formulario" enctype="multipart/form-data">
+    {% csrf_token %}
+    <center>
+    <table border="1">
+        <tr>
+            <td>Nombre:</td>
+            <td><input type="text" name="txtNombre" id="txtNombre"></td>
+        </tr>
+        <tr>
+            <td>Precio:</td>
+            <td><input type="number" name="txtPrecio" id="txtPrecio"></td>
+        </tr>
+        <tr>
+            <td>Stock:</td>
+            <td><input type="number" name="txtStock" id="txtStock"></td>
+        </tr>
+        <tr>
+            <td>Descripcion:</td>
+            <td><textarea name="txtDescripcion"></textarea></td>
+        </tr>
+        <tr>
+            <td>Estado:</td>
+            <td>
+                <select name="cboEstado">
+                    {% for est in estados %}                                    
+                        <option value="{{est.name}}">{{est.name}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+            </tr>
+            <tr>
+                <td>Seleccione imagen:</td>    
+                <td>
+                    <input type="file" name="imagen">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Grabar">
+                </td>                        
+            </tr>
+    </table>
+    </center>
+    </form>
+    </div>
+    <div id="respuesta">{{msg}}</div>
+{% endblock contenido %}
+

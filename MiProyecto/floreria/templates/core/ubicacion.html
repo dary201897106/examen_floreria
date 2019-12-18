@@ -1,0 +1,28 @@
+{% extends "core/base.html" %}
+
+{% block titulo %}
+    Ubicacion
+{% endblock titulo %}
+{% load static %}
+{% block contenido %}
+<br>
+    <center>
+    <h1>Ubicación - Floreria Florever</h1>
+    <br>
+        <img src="{% static 'img/mapaUbicacion.png' %}">
+    <br>
+    <br> 
+        <h2>Dirección</h2>
+        <p> Avenida Americo Vespucio 1501, Los Cerrillos, Cerrillos, ChileCerrillos, Santiago, Region Metropolitana, CL.</p>
+        <br>
+        <h2>Horario de Atención</h2>
+        <p>Lunes a Sabado 8:30 a 22:00 / Domingos y Festivos 09:00 a 22:00</p>
+        <br>
+        <h2>Teléfono:</h2>
+        <p>             
+         225459405
+        </p>
+        <br>
+        <br>
+    </center>
+{% endblock contenido %}

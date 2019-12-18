@@ -1,0 +1,33 @@
+{% extends "core/base.html" %}
+
+{% block titulo %}
+     Galeria de Flores - Floreria Florever
+{% endblock titulo %}
+{% load static %}
+{% block contenido %}
+     <center>
+    <h1>Galería de Flores</h1>
+    </center>
+    <hr>
+    <br>
+
+    {% for flo in flores %}
+   
+    <div class="productos">            
+            <img src="{{flo.imagen.url}}">
+            <h2>{{flo.name}}</h2>
+            <h3>{{flo.precio}}</h3>
+            <h3>{{flo.descripcion}}</h3>
+            <div><b>Agregar Carro</b></div>
+        </div>
+        {% endfor %}
+        <!--<hr>
+        <h1>{{lista}}</h1>-->
+       
+{% endblock contenido %}
+ <!--<a href="{% url 'AGREGAR_CARRO' flo.name %}">Agregar al Carrito</a>SE DEBE ELIMINAR-->
+
+
+
+        
+   

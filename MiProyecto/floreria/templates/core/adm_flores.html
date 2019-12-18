@@ -1,0 +1,19 @@
+{% extends "core/base.html" %}
+
+{% block titulo %}
+    Administración de las Flores
+{% endblock titulo %}
+{% load static %}
+{% block contenido %}
+    {% for flo in flores %}
+        <div class="flor">
+            <h3>{{flo.name}}</h3>
+            <img src="{{flo.imagen.url}}" width="100" height="100">
+            <p>
+                {{flo.descripcion}}
+            </p>
+            <a href="{% url 'ELIMINAR' flo.name %}">Eliminar</a> 
+        </div>
+        {% endfor %}
+{% endblock contenido %}
+

@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: crimson, white
+}
+ol, ul{
+    list-style: none;
+}
+
+/* tamaño de la pagina */
+header{
+    width: 100%;
+   
+}
+nav img{
+    width: 60px; height: 60px;
+    float: left;
+    margin-right: 50px;
+}
+nav li{
+    float: left;
+    list-style: none;
+    display: block;
+    background-color: rgb(241, 237, 106);
+    font-family: cursive;
+    padding: 14px;
+}
+nav li a{
+    text-decoration: none;
+}
+nav {
+    background-color: rgb(241, 237, 106);
+    width: 100%;
+    overflow: auto;
+
+}
+nav li:hover{
+    list-style: none;
+    background-color: rgb(235, 155, 201);
+    text-transform: uppercase;
+    transition: 0.8s;
+}
+h1{
+    color:rgb(231, 25, 111);
+    font-family: cursive
+}
+h2{
+    color:rgb(231, 25, 111);
+    font-family: cursive
+}
+h3{
+    color:rgb(43, 23, 31);
+    font-family: cursive
+}
+
+.central{
+    margin-top: 50px;
+    text-align: center;
+}
+.productos p{
+    text-align: justify;
+}
+
+
+/* para ordenar las fotos de la galeria */
+.productos{
+    display: inline-block;
+    padding: 50px 0px 50px 200px;
+    width: 180px;
+}
+
+/*me sirve para ordenar las fotos de las redes sociales*/
+.redes_sociales{
+display: inline-flex;
+padding: 50px 0px 50px 200px;
+width: 180px;
+}
+
+/*Tamaño de las fotos de la galeria*/
+.productos img{
+width: 210px;
+height: 210px;
+}
+
+/*cuando me pongo encima de la imagen de la galeria se marca la palabra ver producto*/
+.productos img:hover ~ div{
+    background-color: rgb(241, 237, 106);padding: 6px;border-radius: 2em;color: rgb(27, 13, 13);
+}
+
+/* para ordenar las fotos de la galeria Adm. de Flores */
+.flor{
+    display: inline-block;
+    padding: 50px 0px 50px 200px;
+    width: 180px;
+}
+/*Tamaño de las fotos de la galeria Adm. de Flores*/
+.flor img{
+    width: 210px;
+    height: 210px;
+}
+
+
+
+/* -------- modificacion de los estilos dep. del dispositivo */
+/* media query*/
+@media (max-width:600px){
+    header nav img{
+        display: none;
+    }
+    .productos{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 10px;
+        width: 120px;
+        float: left;
+        margin: 5px;
+        border-radius: 10px 0px 10px 0px;
+    }
+    .productos img{
+        width: 100px;
+        height: 150px;
+    }
+}

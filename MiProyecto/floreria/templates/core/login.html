@@ -1,0 +1,49 @@
+{% extends "core/base.html" %}
+
+{% block titulo %}
+    Login
+{% endblock titulo %}
+{% load static %}
+{% block contenido %}
+    <br>
+    <center>
+    <h1>Login</h1>
+    </center>
+    <br>
+    <br>
+    <br>
+    <form action="" method="POST">
+    {% csrf_token %}
+        <center
+        <table border="1">
+            <tr>
+                <td>Usuario:</td>
+                <td>
+                    <input type="text" name="txtUsuario">
+                </td>
+            </tr>
+            <tr>
+                <td>Contraseña:</td>
+                <td>
+                    <input type="password" name="txtPass">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Acceder">
+                </td>
+                
+            </tr>
+        </table>
+        </center>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>
+    <h1><a href="{% url 'social:begin' 'facebook' %}">Login con Facebook</a><h/h1>
+    </center>
+    <br>
+    <br>
+{% endblock contenido %}
